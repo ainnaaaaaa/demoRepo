@@ -1,0 +1,144 @@
+/* CSS Variables */
+:root {
+    --primary-color: lightblue;
+    --secondary-color: darkblue;
+    --text-color: #333;
+    --padding: 20px;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar (Flexbox) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: var(--padding);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    padding: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero Section (Grid Layout, Animation) */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    padding: var(--padding);
+}
+
+.hero-text {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+.cta-btn {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #333;
+}
+
+/* Services Section (Grid Layout) */
+.services {
+    text-align: center;
+    padding: var(--padding);
+    background-color: #fff;
+}
+
+.services h2 {
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service {
+    background-color: var(--primary-color);
+    padding: var(--padding);
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design (Media Queries) */
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+    .hero-image {
+        display: none;
+    }
+
+    .nav-links {
+        display: block;
+        text-align: center;
+    }
+}

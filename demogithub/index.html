@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Cards with Description</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .card {
+                width: 300px;
+                border-radius: 10px;
+                overflow: hidden;
+                margin: 19px;
+                box-shadow: 0 4px 10px gray;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-body {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: flex-end;
+            height: 500px;
+        }
+
+        .navbar {
+            background-color: #4c4c4c;
+            color: white;
+            padding: 15px;
+
+        }
+
+        a {
+            color: white;
+            text-decoration: none; 
+            padding: 10px;
+        }
+
+        .navbar a:hover {
+            background-color: gray;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 50%;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+          <a href="index.html">Home</a>
+          <a href="test.html" target="_blank">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    <div class="cards-container">
+        <div class="card">
+            <img src="image/corgi_smiling.png">
+            <div class="card-body">
+                <h4>Lorem 1</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est sed aliquam, itaque, suscipit natus expedita in ipsa doloremque blanditiis voluptas architecto, 
+                    amet accusamus debitis. Optio aliquam atque asperiores distinctio reprehenderit.</p></div>
+        </div>
+        <div class="card">
+            <img src="image/corgi_smiling.png">
+            <div class="card-body">
+                <h4>Lorem 2</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est sed aliquam, itaque, suscipit natus expedita in ipsa doloremque blanditiis voluptas architecto, 
+                    amet accusamus debitis. Optio aliquam atque asperiores distinctio reprehenderit.</p></div>
+        </div>
+        <div class="card">
+            <img src="image/corgi_smiling.png">
+            <div class="card-body">
+                <h4>Lorem 3</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est sed aliquam, itaque, suscipit natus expedita in ipsa doloremque blanditiis voluptas architecto, 
+                    amet accusamus debitis. Optio aliquam atque asperiores distinctio reprehenderit.</p></div>
+        </div>
+    </div>
+
+    <video width="560" height="315" controls autoplay muted>
+        <source src="image/rakrakan.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>
